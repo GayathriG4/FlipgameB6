@@ -1,0 +1,104 @@
+body {
+    min-height: 100vh;
+    min-width: 100vh;
+    background-color: #000000;
+    color: white;
+  }
+  
+  h1 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 50px;
+  }
+  
+  p {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+  }
+  
+  .actions {
+      display: flex;
+      justify-content: center;
+  }
+  
+  .actions button {
+      padding: 8px 16px;
+      font-size: 30px;
+      border-radius: 10px;
+      background-color: #27ae60;
+      color: white;
+  }
+  
+  .grid-container {
+    display: grid;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(4, 140px);
+    grid-template-rows: repeat(2, calc(140px / 2 * 2));
+  }
+  
+  .card {
+    height: calc(140px / 2 * 2);
+    width: 140px;
+    border-radius: 10px;
+    background-color: violet;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+      backface-visibility: hidden;
+      position: absolute;
+      border-radius: 10px;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+  }
+  
+  .card .front {
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card .back {
+    
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+  }
+  
+  .card .front {
+    transform: rotateY(180deg);
+  }
+
+  .score {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.restart {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #27ae60;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.restart:hover {
+    background-color: #1f8650;
+}
